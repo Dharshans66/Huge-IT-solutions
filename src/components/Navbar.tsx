@@ -27,7 +27,7 @@ const router =useRouter()
         const token = Cookies.get("access_token");
         if (!token) {
           console.log("No token found, redirecting to login");
-          router.push("/login");
+          router.push("/");
           return;
         }
 
@@ -46,7 +46,7 @@ const router =useRouter()
         setUser(userDetails);
       } catch (err) {
         console.error("Error fetching user:", err);
-        router.push("/login"); // redirect to login if token invalid
+        router.push("/"); // redirect to login if token invalid
       }
     };
 
