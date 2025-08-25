@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+//////////////////////////////////////////
 
-First, run the development server:
+Project Setup and Usage
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Prerequisites
+1.Install Node.js on your system.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Application Flow
+2.When you first open the app, it will route you to the Login Page.
+   .If your email is not registered, you need to sign up first.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3.Sign Up
+ .Register using a valid email address.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4.Login
+ .After signing up, log in using your credentials.
+ .During login, a token will be created and stored in cookies for authentication.
 
-## Learn More
+5.Routing and Token Validation
+ .If a user is not logged in and tries to access other routes, they will be redirected back to the login page due to token validation.
 
-To learn more about Next.js, take a look at the following resources:
+6.Dashboard
+ .Once logged in, users are routed to the Dashboard.
+ .Data will be fetched and displayed in the Navbar and Headers.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+7.Recommended Jobs
+ .You can add new jobs here.
+ .These jobs will then be fetched and displayed on the Dashboard.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+8.Application Status
+ .Accessible via the header route /application.
+ .This is a static design page showing the application status.
 
-## Deploy on Vercel
+9.Logout
+ .There is a Logout button in the Navbar.
+ .Clicking it will log out the user and delete the token from cookies.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Additional Features
+ .React-Toast: Used to show success and error messages.
+ .Loading GIF: Added to enhance user experience during data fetches.
+ .Cookies: Used to securely store authentication tokens.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+//////////////////
+Attached screenshots
+<img width="1888" height="1031" alt="Image" src="https://github.com/user-attachments/assets/3e3ba8c5-9399-4194-be12-98cc33097989" />
+<img width="1887" height="983" alt="Image" src="https://github.com/user-attachments/assets/b7351fac-caab-4c44-a051-4b6a5359d122" />
+<img width="1902" height="983" alt="Image" src="https://github.com/user-attachments/assets/2c951e2a-1629-450e-8af3-d9288320d68e" />
+<img width="1885" height="981" alt="Image" src="https://github.com/user-attachments/assets/cf8c532f-59f4-455f-a033-6a4292b1f419" />
+<img width="1886" height="981" alt="Image" src="https://github.com/user-attachments/assets/b74158c0-43c8-411b-bf9f-6ea8749f3d1d" />
